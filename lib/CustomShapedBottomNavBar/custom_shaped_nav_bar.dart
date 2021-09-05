@@ -13,6 +13,10 @@ class _CustomShapedNavBarState extends State<CustomShapedNavBar> {
     final Size size = MediaQuery.of(context).size;
 
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Custom Shaped Bottom Nav Bar'),
+        centerTitle: true,
+      ),
       backgroundColor: Colors.grey,
       body: Stack(
         children: [
@@ -32,7 +36,9 @@ class _CustomShapedNavBarState extends State<CustomShapedNavBar> {
                   Center(
                     heightFactor: 0.6,
                     child: FloatingActionButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        print('Main button - Shopping bag');
+                      },
                       backgroundColor: Colors.amber,
                       child: Icon(Icons.shopping_bag),
                       elevation: 0.1,
@@ -45,22 +51,30 @@ class _CustomShapedNavBarState extends State<CustomShapedNavBar> {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            print('home');
+                          },
                           icon: Icon(Icons.home),
                         ),
                         IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            print('restaurant');
+                          },
                           icon: Icon(Icons.restaurant_menu),
                         ),
                         Container(
                           width: size.width * 0.20,
                         ),
                         IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            print('bookmark');
+                          },
                           icon: Icon(Icons.bookmark),
                         ),
                         IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            print('notifications');
+                          },
                           icon: Icon(Icons.notifications),
                         ),
                       ],
